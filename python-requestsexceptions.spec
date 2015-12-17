@@ -2,7 +2,7 @@
 %global with_python3 1
 %endif
 
-
+%{!?upstream_version: %global upstream_version %{version}}
 %global pypi_name requestsexceptions
 
 Name:           python-%{pypi_name}
@@ -44,7 +44,7 @@ requests library regardless of whether they are bundled.
 %endif
 
 %prep
-%autosetup -n %{pypi_name}-%{version}
+%autosetup -n %{pypi_name}-%{upstream_version}
 
 %build
 %py2_build
