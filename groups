@@ -1,3 +1,5 @@
-# UUID                                  	Group Name
-#
-5010097d556e70fc0bc261e45b341bc4ed532219	requestsexceptions-distgit-ptl
+# UUID          Group Name
+6ddfecad023c6f4fa3ac8c4d2583c502ea675a73 	Non-Interactive Users
+6955fc2d159c87944a45c183dac91c391b7b553b       	requestsexceptions-distgit-core
+5010097d556e70fc0bc261e45b341bc4ed532219        	requestsexceptions-distgit-ptl
+global:Registered-Users		Registered Users
