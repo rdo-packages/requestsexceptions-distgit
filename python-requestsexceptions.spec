@@ -25,6 +25,7 @@ Summary:        Import exceptions from potentially bundled packages in requests
 
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
+BuildRequires:  python-setuptools
 
 %description -n python2-%{pypi_name}
 This is a simple library to find the correct path to exceptions in the
