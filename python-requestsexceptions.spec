@@ -6,8 +6,8 @@
 %global pypi_name requestsexceptions
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        1.1.3
+Release:        1%{?dist}
 Summary:        Import exceptions from potentially bundled packages in requests
 
 License:        ASL 2.0
@@ -74,3 +74,6 @@ requests library regardless of whether they are bundled.
 %endif
 
 %changelog
+* Wed Sep 14 2016 Haikel Guemar <hguemar@fedoraproject.org> 1.1.3-1
+- Update to 1.1.3
+
