@@ -6,8 +6,8 @@
 %global pypi_name requestsexceptions
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        1.3.0
+Release:        1%{?dist}
 Summary:        Import exceptions from potentially bundled packages in requests
 
 License:        ASL 2.0
@@ -74,3 +74,6 @@ requests library regardless of whether they are bundled.
 %endif
 
 %changelog
+* Fri Aug 11 2017 Alfredo Moralejo <amoralej@redhat.com> 1.3.0-1
+- Update to 1.3.0
+
