@@ -5,6 +5,10 @@
 %{!?upstream_version: %global upstream_version %{version}}
 %global pypi_name requestsexceptions
 
+%global common_desc \
+This is a simple library to find the correct path to exceptions in the \
+requests library regardless of whether they are bundled.
+
 Name:           python-%{pypi_name}
 Version:        XXX
 Release:        XXX
@@ -16,8 +20,7 @@ Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{versi
 BuildArch:      noarch
 
 %description
-This is a simple library to find the correct path to exceptions in the
-requests library regardless of whether they are bundled.
+%{common_desc}
 
 %package -n python2-%{pypi_name}
 Summary:        Import exceptions from potentially bundled packages in requests
@@ -28,8 +31,7 @@ BuildRequires:  python-pbr
 BuildRequires:  python-setuptools
 
 %description -n python2-%{pypi_name}
-This is a simple library to find the correct path to exceptions in the
-requests library regardless of whether they are bundled.
+%{common_desc}
 
 %if 0%{?with_python3}
 %package -n python3-%{pypi_name}
@@ -40,8 +42,7 @@ BuildRequires:  python3-devel
 BuildRequires:  python3-pbr
 
 %description -n python3-%{pypi_name}
-This is a simple library to find the correct path to exceptions in the
-requests library regardless of whether they are bundled.
+%{common_desc}
 %endif
 
 %prep
