@@ -27,8 +27,8 @@ Summary:        Import exceptions from potentially bundled packages in requests
 %{?python_provide:%python_provide python2-%{pypi_name}}
 
 BuildRequires:  python2-devel
-BuildRequires:  python-pbr
-BuildRequires:  python-setuptools
+BuildRequires:  python2-pbr
+BuildRequires:  python2-setuptools
 
 %description -n python2-%{pypi_name}
 %{common_desc}
