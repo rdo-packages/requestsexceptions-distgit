@@ -10,8 +10,8 @@ This is a simple library to find the correct path to exceptions in the \
 requests library regardless of whether they are bundled.
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        1.4.0
+Release:        1%{?dist}
 Summary:        Import exceptions from potentially bundled packages in requests
 
 License:        ASL 2.0
@@ -75,3 +75,6 @@ BuildRequires:  python3-pbr
 %endif
 
 %changelog
+* Sat Feb 10 2018 RDO <dev@lists.rdoproject.org> 1.4.0-1
+- Update to 1.4.0
+
