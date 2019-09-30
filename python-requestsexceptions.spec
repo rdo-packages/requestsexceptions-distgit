@@ -1,6 +1,14 @@
+# Macros for py2/py3 compatibility
 %if 0%{?fedora} || 0%{?rhel} > 7
-%global with_python3 1
+%global pyver %{python3_pkgversion}
+%else
+%global pyver 2
 %endif
+%global pyver_bin python%{pyver}
+%global pyver_sitelib %python%{pyver}_sitelib
+%global pyver_install %py%{pyver}_install
+%global pyver_build %py%{pyver}_build
+# End of macros for py2/py3 compatibility
 
 %{!?upstream_version: %global upstream_version %{version}}
 %global pypi_name requestsexceptions
@@ -22,56 +30,33 @@ BuildArch:      noarch
 %description
 %{common_desc}
 
-%package -n python2-%{pypi_name}
+%package -n python%{pyver}-%{pypi_name}
 Summary:        Import exceptions from potentially bundled packages in requests
-%{?python_provide:%python_provide python2-%{pypi_name}}
-
-BuildRequires:  python2-devel
-BuildRequires:  python2-pbr
-BuildRequires:  python2-setuptools
-
-%description -n python2-%{pypi_name}
-%{common_desc}
-
-%if 0%{?with_python3}
-%package -n python3-%{pypi_name}
-Summary:        Import exceptions from potentially bundled packages in requests
-%{?python_provide:%python_provide python3-%{pypi_name}}
-
-BuildRequires:  python3-devel
-BuildRequires:  python3-pbr
-
-%description -n python3-%{pypi_name}
-%{common_desc}
+%{?python_provide:%python_provide python%{pyver}-%{pypi_name}}
+%if %{pyver} == 3
+Obsoletes: python2-%{pypi_name} < %{version}-%{release}
 %endif
+
+BuildRequires:  python%{pyver}-devel
+BuildRequires:  python%{pyver}-pbr
+BuildRequires:  python%{pyver}-setuptools
+
+%description -n python%{pyver}-%{pypi_name}
+%{common_desc}
 
 %prep
 %autosetup -n %{pypi_name}-%{upstream_version}
 
 %build
-%py2_build
-%if 0%{?with_python3}
-%py3_build
-%endif
+%{pyver_build}
 
 %install
-%py2_install
-%if 0%{?with_python3}
-%py3_install
-%endif
+%{pyver_install}
 
-%files -n python2-%{pypi_name}
+%files -n python%{pyver}-%{pypi_name}
 %doc README.rst
 %license LICENSE
-%{python2_sitelib}/%{pypi_name}
-%{python2_sitelib}/*.egg-info
-
-%if 0%{?with_python3}
-%files -n python3-%{pypi_name}
-%doc README.rst
-%license LICENSE
-%{python3_sitelib}/%{pypi_name}
-%{python3_sitelib}/*.egg-info
-%endif
+%{pyver_sitelib}/%{pypi_name}
+%{pyver_sitelib}/*.egg-info
 
 %changelog
