@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4d29b340_9b72fd62",
+        "filename": "python-requestsexceptions.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2019-10-01T10:44:41Z",
+      "side": 1,
+      "message": "this can be cleaned up",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 6
+      },
+      "revId": "9dcd505f62e1d4f75c77a28cba8a1e9f1ada2a04",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
