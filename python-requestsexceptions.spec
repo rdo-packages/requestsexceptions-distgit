@@ -46,3 +46,4 @@ BuildRequires:  python3-setuptools
 %{python3_sitelib}/*.egg-info
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack-infra/requestsexceptions/commit/?id=d7ac0ff7ca9efcc1624aae0a2431e0a5862b069f
