@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "97786a10_5059671c",
+        "filename": "python-requestsexceptions.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-02-17T16:17:18Z",
+      "side": 1,
+      "message": "we have 1.4.0-2 from previous builds so we\u0027ll need to bump the release to 3.",
+      "range": {
+        "startLine": 13,
+        "startChar": 16,
+        "endLine": 13,
+        "endChar": 17
+      },
+      "revId": "34a784bbcc81217e0d177d014ee7f5b0ef825c5f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
