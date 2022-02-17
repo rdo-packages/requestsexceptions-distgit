@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
+%global sources_gpg_sign 0x4c8b8b5a694f612544b3b4bac52f01a3fbdb9949
 
 %{!?upstream_version: %global upstream_version %{version}}
 %global pypi_name requestsexceptions
@@ -9,8 +9,8 @@ This is a simple library to find the correct path to exceptions in the \
 requests library regardless of whether they are bundled.
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        1.4.0
+Release:        1%{?dist}
 Summary:        Import exceptions from potentially bundled packages in requests
 
 License:        ASL 2.0
@@ -63,3 +63,5 @@ BuildRequires:  python3-setuptools
 %{python3_sitelib}/*.egg-info
 
 %changelog
+* Thu Feb 17 2022 Jose Castro Leon <jose.castro.leon@cern.ch> 1.4.0-1
+- Upstream 1.4.0
