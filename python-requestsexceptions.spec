@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
+%global sources_gpg_sign 0x4c8b8b5a694f612544b3b4bac52f01a3fbdb9949
 
 %{!?upstream_version: %global upstream_version %{version}}
 # we are excluding some BRs from automatic generator
@@ -11,8 +11,8 @@ This is a simple library to find the correct path to exceptions in the \
 requests library regardless of whether they are bundled.
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        1.4.0
+Release:        4%{?dist}
 Summary:        Import exceptions from potentially bundled packages in requests
 
 License:        Apache-2.0
@@ -77,3 +77,6 @@ done
 %{python3_sitelib}/*.dist-info
 
 %changelog
+* Fri Mar 15 2024 RDO <dev@lists.rdoproject.org> 1.4.0-4
+- Rebuild 1.4.0 in Caracal
+
