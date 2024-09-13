@@ -11,8 +11,8 @@ This is a simple library to find the correct path to exceptions in the \
 requests library regardless of whether they are bundled.
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        queens-em
+Release:        1%{?dist}
 Summary:        Import exceptions from potentially bundled packages in requests
 
 License:        Apache-2.0
@@ -77,3 +77,6 @@ done
 %{python3_sitelib}/*.dist-info
 
 %changelog
+* Wed Sep 18 2024 RDO <dev@lists.rdoproject.org> queens-em-1
+- Update to queens-em
+
